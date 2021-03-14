@@ -1,0 +1,45 @@
+name: "fzf"
+latest_version: 0.26.0
+brrr_version: 0.46368.144
+releases_feed: "https://github.com/junegunn/fzf/releases.atom"
+tags:
+  - vim
+  - go
+  - bash
+  - zsh
+  - tmux
+  - cli
+  - fish
+  - unix
+  - neovim
+  - fzf 
+url: "https://github.com/junegunn/fzf"
+templates:
+  v1: 
+    linux:
+      post_install:
+        - 
+          type: "symlink"
+          source: "fzf"
+          target: "fzf"
+      binary_type: "tar"
+      url: "https://github.com/junegunn/fzf/releases/download/{brrr_package_version}/fzf-{brrr_package_version}-linux_amd64.tar.gz"
+    macos:
+      post_install:
+        - 
+          type: "symlink"
+          source: "fzf"
+          target: "fzf"
+      binary_type: "zip"
+      url: "https://github.com/junegunn/fzf/releases/download/{brrr_package_version}/fzf-{brrr_package_version}-darwin_amd64.tar.gz"
+    macosarm:
+      post_install:
+        - 
+          type: "symlink"
+          source: "fzf"
+          target: "fzf"
+      binary_type: "zip"
+      url: "https://github.com/junegunn/fzf/releases/download/{brrr_package_version}/fzf-{brrr_package_version}-darwin_arm64.tar.gz"
+versions:
+  "0.26.0":
+    use_template: "v1"
