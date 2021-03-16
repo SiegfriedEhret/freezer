@@ -1,5 +1,5 @@
 name: "nnn"
-latest_version: 3.5
+latest_version: 3.6
 brrr_version: 0.28657.144
 releases_feed: "https://github.com/jarun/nnn/releases.atom"
 tags:
@@ -25,6 +25,27 @@ tags:
   - c 
 url: "https://github.com/jarun/nnn"
 versions:
+  "3.6":
+    linux:
+      post_install:
+        - 
+          type: "symlink"
+          source: "nnn-icons-static"
+          target: "nnn"
+      binary_type: "tar"
+      url: "https://github.com/jarun/nnn/releases/download/v3.6/nnn-icons-static-3.6.x86_64.tar.gz"
+    macos:
+      post_install:
+        -
+          type: "run"
+          command: "make O_ICONS=1"
+          working_directory: "nnn-3.6"
+        - 
+          type: "symlink"
+          source: "nnn-3.6/nnn"
+          target: "nnn"
+      binary_type: "tar"
+      url: "https://github.com/jarun/nnn/releases/download/v3.6/nnn-v3.6.tar.gz"
   "3.5":
     linux:
       post_install:
