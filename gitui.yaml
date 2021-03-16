@@ -1,5 +1,5 @@
 name: "gitui"
-latest_version: 0.12.0
+latest_version: 0.13.0
 brrr_version: 0.46368.144
 releases_feed: "https://github.com/extrawurst/gitui/releases.atom"
 tags:
@@ -29,6 +29,8 @@ templates:
       binary_type: "tar"
       url: "https://github.com/extrawurst/gitui/releases/download/v{brrr_package_version}/gitui-mac.tar.gz"
 versions:
+  "0.13.0":
+    use_template: "v1"
   "0.12.0":
     use_template: "v1"
   "0.11.0":
