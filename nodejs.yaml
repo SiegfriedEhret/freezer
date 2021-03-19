@@ -1,5 +1,5 @@
 name: "nodejs"
-latest_version: 15.11.0
+latest_version: 15.12.0
 brrr_version: 0.46368.144
 releases_feed: "https://github.com/nodejs/node/releases.atom"
 tags:
@@ -32,6 +32,8 @@ templates:
       binary_type: "tar"
       url: "https://nodejs.org/dist/v{brrr_package_version}/node-v{brrr_package_version}-linux-x64.tar.xz"
 versions:
+  "15.12.0":
+    use_template: "v1"
   "15.11.0":
     use_template: "v1"
   "15.10.0":
