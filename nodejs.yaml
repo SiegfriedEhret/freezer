@@ -104,23 +104,3 @@ versions:
     use_template: "v1"
   "14.4.0":
     use_template: "v1"
-  "12.20.1":
-    use_template: "v1"
-  "12.20.0":
-    use_template: "v1"
-  "12.19.1":
-    use_template: "v1"
-  "12.19.0":
-    use_template: "v1"
-  "12.18.4":
-    use_template: "v1"
-  "12.18.3":
-    use_template: "v1"
-  "12.18.2":
-    use_template: "v1"
-  "12.18.1":
-    use_template: "v1"
-  "12.18.0":
-    use_template: "v1"
-  "12.17.0":
-    use_template: "v1"
