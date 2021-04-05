@@ -1,5 +1,5 @@
 name: "exa"
-latest_version: 0.9.0
+latest_version: 0.10.0
 brrr_version: 0.28657.144
 releases_feed: "https://github.com/ogham/exa/releases.atom"
 tags:
@@ -7,7 +7,27 @@ tags:
   - ls
   - command-line
 url: "https://github.com/ogham/exa"
+templates:
+  v1:
+    linux:
+      post_install:
+        - 
+          type: "symlink"
+          source: "bin/exa"
+          target: "exa"
+      binary_type: "zip"
+      url: "https://github.com/ogham/exa/releases/download/v{brrr_package_version}/exa-linux-x86_64-v{brrr_package_version}.zip"
+    macos:
+      post_install:
+        - 
+          type: "symlink"
+          source: "bin/exa"
+          target: "exa"
+      binary_type: "zip"
+      url: "https://github.com/ogham/exa/releases/download/v{brrr_package_version}/exa-macos-x86_64-v{brrr_package_version}.zip"
 versions:
+  "0.10.0":
+    use_template: "v1"
   "0.9.0":
     linux:
       post_install:
