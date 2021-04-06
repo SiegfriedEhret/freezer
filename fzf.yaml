@@ -1,5 +1,5 @@
 name: "fzf"
-latest_version: 0.26.0
+latest_version: 0.27.0
 brrr_version: 0.46368.144
 releases_feed: "https://github.com/junegunn/fzf/releases.atom"
 tags:
@@ -41,5 +41,7 @@ templates:
       binary_type: "zip"
       url: "https://github.com/junegunn/fzf/releases/download/{brrr_package_version}/fzf-{brrr_package_version}-darwin_arm64.tar.gz"
 versions:
+  "0.27.0":
+    use_template: "v1"
   "0.26.0":
     use_template: "v1"
