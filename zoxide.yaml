@@ -1,5 +1,5 @@
 name: "zoxide"
-latest_version: 0.5.0
+latest_version: 0.6.0
 brrr_version: 0.28657.144
 releases_feed: "https://github.com/ajeetdsouza/zoxide/releases.atom"
 tags:
@@ -9,89 +9,34 @@ tags:
   - rust
   - zsh
 url: "https://github.com/ajeetdsouza/zoxide"
+templates:
+  v1:
+    linux:
+      post_install:
+        - 
+          type: "symlink"
+          source: "zoxide-x86_64-unknown-linux-gnu"
+          target: "zoxide"
+      binary_type: "binary"
+      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v{brrr_package_version}/zoxide-x86_64-unknown-linux-gnu"
+    macos:
+      post_install:
+        - 
+          type: "symlink"
+          source: "zoxide-x86_64-apple-darwin"
+          target: "zoxide"
+      binary_type: "binary"
+      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v{brrr_package_version}/zoxide-x86_64-apple-darwin"
 versions:
+  "0.6.0":
+    use_template: "v1"
   "0.5.0":
-    linux:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-unknown-linux-gnu"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.5.0/zoxide-x86_64-unknown-linux-gnu"
-    macos:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-apple-darwin"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.5.0/zoxide-x86_64-apple-darwin"
+    use_template: "v1"
   "0.4.3":
-    linux:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-unknown-linux-gnu"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.3/zoxide-x86_64-unknown-linux-gnu"
-    macos:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-apple-darwin"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.3/zoxide-x86_64-apple-darwin"
+    use_template: "v1"
   "0.4.2":
-    linux:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-unknown-linux-gnu"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.2/zoxide-x86_64-unknown-linux-gnu"
-    macos:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-apple-darwin"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.2/zoxide-x86_64-apple-darwin"
+    use_template: "v1"
   "0.4.1":
-    linux:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-unknown-linux-gnu"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.1/zoxide-x86_64-unknown-linux-gnu"
-    macos:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-apple-darwin"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.1/zoxide-x86_64-apple-darwin"
+    use_template: "v1"
   "0.4.0":
-    linux:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-unknown-linux-gnu"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.0/zoxide-x86_64-unknown-linux-gnu"
-    macos:
-      post_install:
-        - 
-          type: "symlink"
-          source: "zoxide-x86_64-apple-darwin"
-          target: "zoxide"
-      binary_type: "binary"
-      url: "https://github.com/ajeetdsouza/zoxide/releases/download/v0.4.0/zoxide-x86_64-apple-darwin"
+    use_template: "v1"
